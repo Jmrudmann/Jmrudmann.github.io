@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - West Fork Fellowship</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- <style>
+      
+    </style> -->
+</head>
+<body>
+    <special-header></special-header>
+    <h1>Info</h1>
+    <div class="content-container">
+        <h2>Leadership</h2>
+        <p>
+            Dr. Nathan Berry, originally from Missouri 
+        </p>
+        <h2>Meeting Info</h2>
+        <p>
+            We meet on Sunday mornings:
+            10:30am-12 noon for our service
+            12-1pm Fellowship luncheon
+        
+        
+            Click Here for more information on meeting times. 
+        </p>
+        <h2>Connect With Us</h2>
+        <p>
+            Please allow 24-26 hours for an email reply, thank you. 
+        </p>
+        <h2>Our Location</h2>
+        <p>West Fork Fellowship 
+
+            41 Orange Drive
+        
+            Fairmont, WV 26554
+        </p>
+        <h3>Integrate Google Maps here</h3>
+        <!-- Embed Google Maps iframe -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.977296330652!2d-80.08168002363365!3d39.46984161272459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884a874bd65a5baf%3A0xc1a75c6a68f26465!2s41%20Orange%20Dr%2C%20Fairmont%2C%20WV%2026554!5e0!3m2!1sen!2sus!4v1736629797317!5m2!1sen!2s"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+        <h3>pastorEmail@example.com</h3>
+    </div>
+
+    <script>
+        fetch('../SpecialHeader.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('special-header').outerHTML = data;
+        });
+        fetch('../SpecialFooter.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

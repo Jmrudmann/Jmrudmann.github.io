@@ -1,0 +1,470 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+    height: 100%; /* Ensure the body takes up the full viewport height */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Arrange children (header, main-content, footer) vertically */
+    font-family: "Candal", serif;
+    background-image: url('../images/Berrys_front_house.png'); /* Adjusted path */
+    background-size: cover;
+    background-position: top center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Ensures the body takes the full viewport height */
+    flex: 1; /* Makes the main content take up all available space */
+    padding-bottom: 20px; /* Optional: Adds spacing between content and footer */
+}
+
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.4);  */
+    z-index: 1; /* Ensure it appears above the background image */
+}
+
+.main-content > * {
+    position: relative; /* Ensure content appears above the overlay */
+    z-index: 2;
+}
+
+body {
+    margin: 0;
+}
+
+/* .main-content {
+    flex: 1; 
+    padding-bottom: 20px; 
+} */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: 'Candal', serif;
+    color: #444;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.5rem 1rem;
+    background: #008489;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 1.08em;
+    font-family: 'Lora', serif;
+}
+
+.btn-big {
+    padding: 0.7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
+.btn:hover {
+    color: white !important;
+    background: #00676a;
+}
+
+/* Input Styles */
+.text-input {
+    padding: 0.7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #008489;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+}
+
+/* Message Styles */
+.msg {
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.success {
+    color: #3a6e3a;
+    border: 1px solid #3a6e3a;
+    background: #bcf5bc;
+}
+
+.error {
+    color: #a94442;
+    border: 1px solid #a94442;
+    background: #f2dede;
+}
+
+/* Navbar Styles */
+header {
+    height: 100px; /* Set a fixed height for the header */
+    position: relative; /* Ensures the menu is positioned relative to the header */
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+header * {
+    color: white;
+    color: black;
+    text-align: right; /* Aligns all child elements to the right */
+}
+
+header .logo {
+    float: left;
+    height: inherit;
+}
+
+header .logo .logo-image {
+    max-height: 100px;
+    width: 200px;
+    padding: 10px;
+}
+
+header ul {
+    list-style: none;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    /* position: absolute;  */
+    /* z-index: 9998; */
+    cursor: pointer;
+}
+
+.showing {
+    max-height: 100em;
+}
+
+header ul li {
+    width: 100%;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul {
+    position: static;
+    display: block;
+    width: 100%;
+}
+/* The options in the menu-toggle */
+header ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header ul li a:hover {
+    /* background: gray; */
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.8s;
+}
+
+header .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 34px;
+    font-size: 1.9em;
+    /* z-index: 9999; */
+    cursor: pointer;
+}
+
+
+
+/* Center Buttons Wrapper */
+.center-btns-wrapper {
+    position: relative;
+    min-height: calc(100vh - 400px); /* Ensures the wrapper fills the space above the footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Center Buttons */
+.center-btns {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.center-btns li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.center-btns li a {
+    color: white;
+    border: 3px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    width: 200px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.center-btns li a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+/* Footer Styles */
+.footer {
+    flex-shrink: 0; /* Prevents the footer from shrinking or overlapping */
+    height: 400px; /* Footer height */
+    background: #303036;
+    color: #d3d3d3;
+}
+
+.footer .footer-content {
+    height: 100%;
+    display: flex;
+    
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .about h1 span {
+    color: #94bfe6;
+}
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid gray;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+    color: white;
+    transition: all 0.3s;
+}
+
+
+/* Footer Section Styles */
+.footer .footer-section.location iframe {
+    width: 100%; /* Makes the iframe take the full width of its container */
+    max-width: 600px; /* Optional: Limits the maximum width */
+    /* height: 300px;  */
+    height: 350px;
+    border: 0; /* Removes the border */
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Centers the iframe horizontally */
+}
+
+
+
+/* CONTENT */
+
+.content {
+    width: 90%;
+    margin: 30px auto 30px;
+    /* border: 1px solid red; */
+}
+
+.content .main-content {
+    width: 70%;
+    float: left;
+    /* border: 1px solid blue; */
+}
+
+.content .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.content .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content .main-content .post {
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+.content .main-content .post .read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #008489;
+    background-color: transparent;
+    border-radius: 0px;
+    color:#008489 !important;
+}
+
+.content .main-content .post .read-more:hover {
+    background-color: #008489;
+    color: white !important;
+    transition: 0.25s;
+}
+
+.content .main-content .post .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.content .main-content .post .post-preview {
+    width: 60%;
+    float: right;
+    padding: 10px;
+}
+
+.content .main-content .recent-post-title {
+  
+    margin: 20px;
+}
+
+.content .sidebar {
+    width: 30%;
+    float: left;
+    /* border: 1px dashed green; */
+}
+
+.content .sidebar.single {
+    padding: 0px 10px
+}
+
+.content .sidebar .section {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    /* margin-bottom: 20px; */
+    margin-top: 20px;
+}
+
+.content .sidebar .section .section-title {
+    margin: 10px 0px 10px 0px;
+}
+
+.content .sidebar .section.search {
+    margin-top: 80px;
+}
+
+/* Search and sidebar are joined together because in the html <div class="section search"> */
+.content .sidebar .section.topics ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #444;
+}
+
+.content .sidebar .section.topics ul li a {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #444;
+    transition: all 0.3s;
+}
+
+.content .sidebar .section.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+
+/* Media Query for Center Buttons */
+@media (max-width: 700px) {
+    .center-btns {
+        display: flex;
+        flex-direction: column; /* Stacks buttons vertically */
+        align-items: center; /* Centers the buttons */
+    }
+
+    .center-btns li {
+        display: block; /* Ensures each button takes its own line */
+        margin: 10px 0; /* Adds vertical spacing between buttons */
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .footer .footer-content {
+        flex-direction: column; /* Stacks the footer sections vertically */
+        align-items: center; /* Centers the sections horizontally */
+    }
+
+    .footer .footer-content .footer-section {
+        width: 100%; /* Ensures each section takes the full width */
+        margin-bottom: 20px; /* Adds spacing between sections */
+        border: none; /* Optional: Removes borders for a cleaner look */
+        flex: 1;
+        padding: 25px;
+        border: 1px solid white;
+        background: #303036;
+    }
+
+    .footer .footer-section.location {
+        margin: 0; 
+        padding: 0; 
+    }
+
+    .footer .footer-section.location iframe {
+        width: 100%; /* Makes the iframe take the full width */
+        max-width: none; /* Removes the maximum width restriction */
+        height: 350px; /* Adjusts the height proportionally */
+    }
+}
+
+
+
+

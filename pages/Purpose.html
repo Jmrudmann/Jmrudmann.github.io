@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gospel - West Fork Fellowship</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- <style>
+      
+    </style> -->
+</head>
+<body>
+    <special-header></special-header>
+    <!-- Facebook page plugin -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0">
+    </script>
+    <!-- src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=285071545181837&autoLogAppEvents=1"> -->
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        
+        <!-- Content -->
+        <div class="content clearfix">
+            <!-- Main Content Wrapper-->
+            <div class="main-content-wrapper">
+                <div class="main-content single">
+                    <h1 class="post-title">Purpose</h1>
+
+                    <div class="post-content">
+                        <p>
+                            The purpose of West Fork Fellowship is to glorify God by obediently making and equipping disciples of Jesus Christ in Fairmont, 
+                            and throughout the world, by the power of the Holy Spirit. We purpose to inform your mind and inspire your heart to know Christ, 
+                            to love Him, to suffer with Him, and to serve people for His glory. Our heart is for the glory of God and the benefit of our fellow man. 
+                
+                        </p>
+                
+                        <h2>The Glory of God </h2>
+                        <p>
+                            Our first major goal as a local Church is the glory of God. Our greatest concern is that His Name be great among the nations, 
+                            from the rising to the setting of the sun (Malachi 1:11, 3:10), and that the Lamb who was slain might receive the full reward for His 
+                            sufferings (Revelation 7:9-10). We find our great purpose and motivation, not in man or his needs, but in God, His commitment to His own glory, 
+                            and our God-given desire to see Him worshipped in every nation, tribe, people, and language. We find our great confidence not in the 
+                            Church’s ability to fulfill the Great Commission both locally and foreign, but in God’s unlimited and unhindered power to accomplish 
+                            all He has decreed. 
+                        </p>
+                        
+                        <h2>The Benefit of Man </h2>
+                        <p>
+                            Our second major goal as a local Church is the salvation of a lost and dying humanity. The Christian who is truly passionate about the glory 
+                            of God and confident in His sovereignty will not be unmoved by the billions of people in the world who have yet to hear the Gospel of Jesus Christ. 
+                            If we are truly Christ-like, the lost multitude of humanity will move us to compassion (Matthew 9:36), even to great sorrow and unceasing grief 
+                            (Romans 9:2). The sincerity of our Christian confession should be questioned if we are not willing to do all within our means to make Christ known 
+                            among the nations and to endure all things for the sake of God’s elect (II Timothy 2:10). We are a people who are sorrowful, yet always rejoicing 
+                            (2 Cor. 6:10). 
+                        </p>
+                
+                        <h2>Why the name West Fork Fellowship?</h2>
+                        <p>
+                            Why West Fork? We are simply located very close to the West Fork River. 
+                            Why Fellowship?  We feel the New Testament Church speaks strongly concerning the true meaning of the word fellowship and the command to practice it.  
+                            We strive to create an atmosphere of genuine fellowship, not only on Sunday mornings, but throughout the week as well.  
+                            The very first account of the New Testament Church highlights the importance of true biblical fellowship in Acts 2:42.  
+                            They were devoted to the Apostles’ teaching and to fellowship, breaking of bread, and prayer.  
+                            We believe the professing church has lessened the idea of what true biblical fellowship and hospitality looks like.  
+                            The very definition of fellowship is to have a partnership and to participate with one another.    
+                            The word ‘fellowship’ at its core means to share all things in common.  Fellowship is holy companionship.  
+                            It’s the true essence of a family of Believers, it’s relationships and partnerships with one another as we serve and commune with Christ together.
+                            
+                            We are a none-denominational fellowship of believers with two main goals: Those two goals are for the glory of God and for the benefit of man.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- // Main Content -->
+
+            <!-- Sidebar -->
+            <div class="sidebar single">
+
+                <div class="fb-page" data-href="https://www.facebook.com/westforkfellowship" data-small-header="false" 
+                    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/westforkfellowship" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/westforkfellowship">westforkfellowship</a>
+                    </blockquote>
+                </div>
+
+                <div class="section topics">
+                    <h2 class="section-title">Topics</h2>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/FiveSolas.html">The Five Solas</a></li>
+                        <li><a href="/pages/Gospel.html">The Gospel</a></li>
+                        <li><a href="/pages/info.html">Info</a></li>
+                        <li><a href="/pages/Membership.html">Membership</a></li>
+                        <li><a href="/pages/Purpose.html">What is our Purpose</a></li>
+                        <li><a href="/pages/Resources.html">Resources</a></li>
+                        <li><a href="/pages/Sermons.html">Sermons</a></li>
+                        <li><a href="/pages/WhatToExpect.html">What to Expect</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- // Sidebar -->
+
+        </div>
+
+    </div>
+    <script>
+        fetch('../SpecialHeader.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('special-header').outerHTML = data;
+        });
+        fetch('../SpecialFooter.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

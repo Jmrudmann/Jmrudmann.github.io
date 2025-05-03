@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons - West Fork Fellowship</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- <style>
+      
+    </style> -->
+</head>
+<body>
+    <special-header></special-header>
+    <!-- Facebook page plugin -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0">
+    </script>
+    <!-- src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=285071545181837&autoLogAppEvents=1"> -->
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        <!-- Content -->
+        <div class="content clearfix">
+            <!-- Main Content Wrapper-->
+            <div class="main-content-wrapper">
+                <div class="main-content single">
+                    <h1 class="post-title">What to Expect</h1>
+
+                    <div class="post-content">
+                        <h2>What to expect when visiting</h2>
+                            <p>
+                                We are a small non-denominational fellowship of local Believers who gather at various times throughout the week to learn about Christ, worship, 
+                                fellowship together, and serve our community. On a typical Sunday, you will see some people in jeans, some in suits, some in dresses. 
+                                Come as you are, but whether you’re formal or informal, modesty is encouraged. We are a simple congregation and encourage you to keep your children 
+                                with you during our service time. Little ears can hear big truths too. West Fork Fellowship is centered on the preaching of God's Word. 
+                                Worship through singing also takes place as a complement to the preaching of the Word. The preaching style is called, expositional preaching. 
+                                In other words, we go verse by verse through a passage or book of the Bible. This allows us to soak up the details, as well as the overall meaning 
+                                and context of the passage. 
+                            </p>
+                            
+                            <h2>Congregational Worship</h2>
+                            <p>
+                                The church assembles on Sunday to be strengthened by the preaching of the Word and fellowship, to reinforce our faith through song, to encourage one another by testimonies, and to express congregational praise and worship to Christ, who is our Audience. The primary focus in our singing is the truth of the Word of God and the edification of the Saints. 
+
+                                We also practice the two ordinances commanded and practiced by the Lord Jesus Christ Himself. We practice open communion which means if you are a professing believer who is visiting with us and in right standing with God, you may join us in fellowship through communion. 
+                                
+                                We also practice the ordinance of Believers baptism by immersion when applicable. 
+                            </p>
+
+                            <h2>Gathering Times</h2>
+                            <p>
+                                Sunday Morning
+                                9:30-10:30am - Corporate prayer meeting (men, women, and children are encouraged to attend) 
+                                
+                                10:30-11:30am - Congregational worship (preaching and singing) 
+                                
+                                12:00pm - We offer a fellowship meal on the premises directly after the meeting. Feel free to stay and enjoy a meal as we fellowship together and partake of the Lord’s Supper after the meal. However, on the first Sunday of every month we move the Lord’s Supper to our service time at 10:30am. 
+                                
+                                Sunday Afternoon
+                                Free time to fellowship together in homes and be with family and friends, or to just rest and relax and get ready for the week ahead. We also offer ministry opportunities on Sunday afternoons if you’re interested. 
+                                
+                                Tuesday
+                                6:30-7:30pm Small group prayer meeting (men and women alternate every other Tuesday evening) 
+                                
+                                Thursday
+                                Small group bible studies are a great place to explore and visit with us 6:30-7:30pm Corporate Bible / Book Studies. Very informal. 
+                                
+                                Saturday
+                                8:30-9:30am Men’s discipleship book study
+                                
+                                Again, this is a great opportunity for men to disciple, challenge, and encourage one another. 
+                            </p>
+                                
+                    </div>
+                </div>
+            </div>
+            <!-- // Main Content -->
+
+            <!-- Sidebar -->
+            <div class="sidebar single">
+
+                <div class="fb-page" data-href="https://www.facebook.com/westforkfellowship" data-small-header="false" 
+                    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/westforkfellowship" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/westforkfellowship">westforkfellowship</a>
+                    </blockquote>
+                </div>
+
+                <div class="section topics">
+                    <h2 class="section-title">Topics</h2>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/FiveSolas.html">The Five Solas</a></li>
+                        <li><a href="/pages/Gospel.html">The Gospel</a></li>
+                        <li><a href="/pages/info.html">Info</a></li>
+                        <li><a href="/pages/Membership.html">Membership</a></li>
+                        <li><a href="/pages/Purpose.html">What is our Purpose</a></li>
+                        <li><a href="/pages/Resources.html">Resources</a></li>
+                        <li><a href="/pages/Sermons.html">Sermons</a></li>
+                        <li><a href="/pages/WhatToExpect.html">What to Expect</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- // Sidebar -->
+
+        </div>
+
+    </div>
+    <script>
+        fetch('../SpecialHeader.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('special-header').outerHTML = data;
+        });
+        fetch('../SpecialFooter.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gospel - West Fork Fellowship</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- <style>
+      
+    </style> -->
+</head>
+<body>
+    <special-header></special-header>
+    <!-- Facebook page plugin -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0">
+    </script>
+    <!-- src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=285071545181837&autoLogAppEvents=1"> -->
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        <nav>
+            <ul>
+                <li><a href="http://9marks.org/">9 Marks</a></li>
+                <li><a href="http://apuritansmind.com/">A Puritans Mind</a></li>
+                <li><a href="http://banneroftruth.org/">Banner of Truth</a></li>
+                <li><a href="http://chapellibrary.org/">Chapel Library</a></li>
+                <li><a href="https://www.desiringgod.org/">Desiring God</a></li>
+                <li><a href="http://founders.org/">Founders</a></li>
+                <li><a href="https://www.gty.org/">Grace to You</a></li>
+                <li><a href="http://grantedministries.org/">Granted Ministries</a></li>
+                <li><a href="http://heartcrymissionary.com/">HeartCry Missionary Society</a></li>
+                <li><a href="http://heritagebooks.org/">Heritage Books</a></li>
+                <li><a href="https://www.ligonier.org/">Ligonier</a></li>
+                <li><a href="http://mljtrust.org/">Martin Lloyd Jones Trust</a></li>
+                <li><a href="http://mediagratiae.org/">Media Gratiae</a></li>
+                <li><a href="https://www.monergism.com/">Monergism</a></li>
+                <li><a href="http://onepassionministries.org/">One Passion Ministries</a></li>
+                <li><a href="http://reformedreader.org/">Reformed Reader</a></li>
+                <li><a href="http://spurgeon.org/">Spurgeon</a></li>
+                <li><a href="http://wtsbooks.com/">WTS Books</a></li>
+            </ul>
+        </nav>
+        <!-- Content -->
+        <div class="content clearfix">
+            <!-- Main Content Wrapper-->
+            <div class="main-content-wrapper">
+                <div class="main-content single">
+                    <h1 class="post-title">Online Resources</h1>
+
+                    <div class="post-content">
+                        <h2>Recommended Bibles </h2>
+                            <p>New American Standard<br>
+                                English Standard Version (ESV Study Bible) ESV Reformation Study Bible<br>
+                                John MacArthur Study Bible<br>
+                                New Living Translation<br> </p>
+                    </div>
+                </div>
+            </div>
+            <!-- // Main Content -->
+
+            <!-- Sidebar -->
+            <div class="sidebar single">
+
+                <div class="fb-page" data-href="https://www.facebook.com/westforkfellowship" data-small-header="false" 
+                    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/westforkfellowship" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/westforkfellowship">westforkfellowship</a>
+                    </blockquote>
+                </div>
+
+                <div class="section topics">
+                    <h2 class="section-title">Topics</h2>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/FiveSolas.html">The Five Solas</a></li>
+                        <li><a href="/pages/Gospel.html">The Gospel</a></li>
+                        <li><a href="/pages/info.html">Info</a></li>
+                        <li><a href="/pages/Membership.html">Membership</a></li>
+                        <li><a href="/pages/Purpose.html">What is our Purpose</a></li>
+                        <li><a href="/pages/Resources.html">Resources</a></li>
+                        <li><a href="/pages/Sermons.html">Sermons</a></li>
+                        <li><a href="/pages/WhatToExpect.html">What to Expect</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- // Sidebar -->
+
+        </div>
+
+    </div>
+    <script>
+        fetch('../SpecialHeader.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('special-header').outerHTML = data;
+        });
+        fetch('../SpecialFooter.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
