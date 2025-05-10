@@ -135,6 +135,14 @@
         .then(response => response.text())
         .then(data => {
             document.querySelector('special-header').outerHTML = data;
+
+            // Initialize menu toggle functionality after header is loaded
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('header ul');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('showing');
+            });
         });
         fetch('../SpecialFooter.html')
             .then(response => response.text())
