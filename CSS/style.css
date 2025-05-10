@@ -121,6 +121,10 @@ a {
     background: #f2dede;
 }
 
+nav {
+    width: 500px;
+}
+
 /* Navbar Styles */
 header {
     height: 100px; /* Set a fixed height for the header */
@@ -447,12 +451,18 @@ header .menu-toggle {
 }
 
 @media (max-width: 800px) {
+    .content {
+        width: 100%;
+    }
     .content .sidebar {
         display: none; /* Hides the sidebar */
     }
 
     .content .main-content {
         width: 100%; /* Expands the main content to take up the full width */
+    }
+    .content .main-content.single {
+        padding: 7px 7px;
     }
 }
 
