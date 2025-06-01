@@ -31,9 +31,17 @@
                     <div class="post-content">
                         <h2>The Character of God</h2>
                             <h3>The Holiness of God</h3>
+                            
                             <p>
-                                Your eyes are too pure to approve evil, and You cannot look on wickedness with favor. Habakkuk 1:13 
-                                But your iniquities have made a separation between you and your God, and your sins have hidden His face from you so that He does not hear. Isaiah 59:2 
+                                Your eyes are too pure to approve evil, and You cannot look on wickedness with favor. 
+                                <span class="bible-ref" data-verse="Your eyes are too pure to see evil, And You cannot look on trouble. Why do You look On those who deal treacherously? Why are You silent when the wicked swallow up Those more righteous than they?"> 
+                                    Habakkuk 1:13
+                                </span>
+                                <!-- <span class="bible-verse" data-verse="Habakkuk 1:13">Habakkuk 1:13</span> -->
+                            </p>
+                            <p>
+                                But your iniquities have made a separation between you and your God, and your sins have hidden His face from you so that He does not hear. 
+                                <span class="bible-verse" data-verse="Isaiah 59:2">Isaiah 59:2</span>
                             </p>
                             <h3>The Justice of God</h3>
                             <p>
@@ -151,6 +159,22 @@
             .then(data => {
                 document.body.insertAdjacentHTML('beforeend', data);
             });
+        
+        // Load Bible verses dynamically
+        document.querySelectorAll('.bible-ref').forEach(ref => {
+        ref.addEventListener('mouseenter', function() {
+            if (!ref.querySelector('.verse-tooltip')) {
+            let tooltip = document.createElement('div');
+            tooltip.className = 'verse-tooltip';
+            tooltip.textContent = ref.getAttribute('data-verse');
+            ref.appendChild(tooltip);
+            }
+        });
+        ref.addEventListener('mouseleave', function() {
+            let tooltip = ref.querySelector('.verse-tooltip');
+            if (tooltip) tooltip.remove();
+        });
+        });
     </script>
 </body>
 </html>

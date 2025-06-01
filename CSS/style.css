@@ -18,16 +18,16 @@
     padding-bottom: 20px; /* Optional: Adds spacing between content and footer */
 }
 
-.main-content::before {
+/* .main-content::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.4);  */
+    background-color: rgba(0, 0, 0, 0.4); 
     z-index: 1;
-}
+} */
 
 /* .main-content > * {
     position: relative; 
@@ -255,7 +255,7 @@ header .menu-toggle {
 /* Footer Styles */
 .footer {
     flex-shrink: 0; /* Prevents the footer from shrinking or overlapping */
-    height: 400px; /* Footer height */
+    height: 400px;
     background: #303036;
     color: #d3d3d3;
 }
@@ -264,6 +264,10 @@ header .menu-toggle {
     height: 100%;
     display: flex;
     
+}
+
+.footer .footer-content p {
+    font-size: 1.3em; /* Adjust the size as needed */
 }
 
 .footer .footer-content .footer-section {
@@ -347,7 +351,7 @@ header .menu-toggle {
 
 .content .main-content .post {
     width: 95%;
-    height: 270px;
+    /* height: 270px; */
     margin: 20px auto;
     border-radius: 5px;
     background: white;
@@ -435,6 +439,47 @@ header .menu-toggle {
     transition: all 0.3s;
 }
 
+/* Sermon Styles */
+.sermon {
+    margin-bottom: 20px;
+}
+
+audio {
+    width: 100%; /* Makes the audio player take up the full width of its container */
+    max-width: 600px; /* Optional: Limits the maximum width */
+}
+
+/* Bible Reference Styles */
+.bible-ref {
+  position: relative;
+  cursor: pointer;
+  color: #0074d9;
+  text-decoration: underline;
+}
+.bible-ref .verse-tooltip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 1.5em;
+  background: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  padding: 8px;
+  z-index: 100;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.bible-ref:hover .verse-tooltip,
+.bible-ref:focus .verse-tooltip {
+  display: block;
+}
+.verse-tooltip sup {
+    vertical-align: super;
+    font-size: 0.8em;
+}
+.verse-tooltip strong {
+    font-weight: bold;
+}
 
 /* Media Query for Center Buttons */
 @media (max-width: 700px) {
